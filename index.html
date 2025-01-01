@@ -7,6 +7,203 @@
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
+    <style>
+      .project-video {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .project-video:focus,
+      .project-video:hover {
+        transform: scale(1.02);
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+        margin: 0;
+        padding: 0;
+        color: #333333;
+      }
+
+      h1, h2, h3 {
+        color: #005f73;
+      }
+
+      .btn {
+        font-size: 1rem;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out;
+      }
+
+      .btn-color-1 {
+        background-color: #ff6f61;
+        color: #ffffff;
+      }
+
+      .btn-color-1:hover {
+        background-color: #e85d51;
+      }
+
+      .btn-color-2 {
+        background-color: #005f73;
+        color: #ffffff;
+      }
+
+      .btn-color-2:hover {
+        background-color: #004d5c;
+      }
+
+      nav {
+        background-color: #005f73;
+        color: #ffffff;
+        padding: 10px 20px;
+      }
+
+      nav .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+
+      nav .nav-links a {
+        text-decoration: none;
+        color: #ffffff;
+        margin: 0 10px;
+      }
+
+      nav .nav-links a:hover {
+        text-decoration: underline;
+      }
+
+      section {
+        padding: 40px 20px;
+        margin: 20px auto;
+      }
+
+      .section__text__p1 {
+        font-size: 1.2rem;
+        color: #ff6f61;
+      }
+
+      .title {
+        font-size: 2.5rem;
+        margin: 10px 0;
+      }
+
+      .project-video {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        border: 2px solid #005f73;
+        border-radius: 10px;
+        transition: transform 0.3s ease-in-out, border-color 0.3s ease-in-out;
+      }
+
+      .project-video:focus,
+      .project-video:hover {
+        transform: scale(1.02);
+        border-color: #ff6f61;
+      }
+
+      footer {
+        background-color: #6fe2f9;
+        color: #ffffff;
+        text-align: center;
+        /* padding: 20px; */
+      }
+
+      footer a {
+        color: #ffffff;
+        text-decoration: none;
+      }
+
+      footer a:hover {
+        text-decoration: underline;
+      }
+
+
+      @keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.animated-text {
+  animation: fadeInUp 1s ease-in-out;
+  opacity: 0; /* Hidden before animation */
+  animation-fill-mode: forwards;
+}
+
+.section__text__p1 {
+  animation-delay: 0.2s;
+}
+
+.title {
+  animation-delay: 0.4s;
+}
+
+.section__text__p2 {
+  animation-delay: 0.6s;
+}
+
+.animated-btn {
+  animation: fadeInUp 1s ease-in-out;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+.btn-container button:nth-child(1) {
+  animation-delay: 0.8s;
+}
+
+.btn-container button:nth-child(2) {
+  animation-delay: 1s;
+}
+
+.animated-socials {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.animated-icon {
+  animation: fadeIn 1.2s ease-in;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+#socials-container img:nth-child(1) {
+  animation-delay: 1.2s;
+}
+
+#socials-container img:nth-child(2) {
+  animation-delay: 1.4s;
+}
+
+
+
+
+
+    </style>
   </head>
   <body>
     <nav id="desktop-nav">
@@ -37,40 +234,38 @@
       </div>
     </nav>
     <section id="profile">
-      <!-- <div class="section__pic-container"> -->
-        <!-- <img src="./assets/IMG-20240410-WA0050.jpg" alt="Takalani Nedzanani profile picture" /> -->
-      <!-- </div> -->
       <div class="section__text">
-        <p class="section__text__p1">Hello, I'm</p>
-        <h1 class="title">Takalani Nedzanani</h1>
-        <p class="section__text__p2">Software Developer & Mobile Developer</p>
+        <p class="section__text__p1 animated-text">Hello, I'm</p>
+        <h1 class="title animated-text">Takalani Nedzanani</h1>
+        <p class="section__text__p2 animated-text">Software & Mobile Developer</p>
         <div class="btn-container">
           <button
-            class="btn btn-color-2"
+            class="btn btn-color-2 animated-btn"
             onclick="window.open('./assets/Takalani-Nedzanani-FlowCV-Resume-20240717.pdf')"
           >
             Download CV
           </button>
-          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+          <button class="btn btn-color-1 animated-btn" onclick="location.href='./#contact'">
             Contact Info
           </button>
         </div>
-        <div id="socials-container">
+        <div id="socials-container" class="animated-socials">
           <img
             src="./assets/linkedin.png"
             alt="My LinkedIn profile"
-            class="icon"
+            class="icon animated-icon"
             onclick="location.href='https://www.linkedin.com/in/takalani-nedzanani-b0a091240/'"
           />
           <img
             src="./assets/github.png"
             alt="My Github profile"
-            class="icon"
+            class="icon animated-icon"
             onclick="location.href='https://github.com/Takalani-Nedzanani?tab=repositories/'"
           />
         </div>
       </div>
     </section>
+    
     <section id="about">
       <p class="section__text__p1">Get To Know More</p>
       <h1 class="title">About Me</h1>
@@ -113,12 +308,12 @@
           </div>
         </div>
       </div>
-      <img
+      <!-- <img
         src="./assets/arrow.png"
         alt="Arrow icon"
         class="icon arrow"
         onclick="location.href='./#experience'"
-      />
+      /> -->
     </section>
     <section id="experience">
       <p class="section__text__p1">Explore My</p>
@@ -159,7 +354,7 @@
                 />
                 <div>
                   <h3>JavaScript</h3>
-                  <p>Basic</p>
+                  <p>Experienced</p>
                 </div>
               </article>
               
@@ -177,7 +372,7 @@
                 />
                 <div>
                   <h3>Android Studio</h3>
-                  <p>Basic</p>
+                  <p>Intermediate</p>
                 </div>
               </article>
               <article>
@@ -216,7 +411,7 @@
                 />
                 <div>
                   <h3>C#(CSharp) ASP.Net Core MVC, .Net Framework</h3>
-                  <p>Basic</p>
+                  <p>Experienced</p>
                 </div>
               </article>
               
@@ -235,7 +430,7 @@
                 />
                 <div>
                   <h3>Git/GitHub</h3>
-                  <p>Basic</p>
+                  <p>Intermediate</p>
                 </div>
               </article>
               <article>
@@ -267,239 +462,171 @@
         </div>
         
       </div>
-      <img
+      <!-- <img
         src="./assets/arrow.png"
         alt="Arrow icon"
         class="icon arrow"
         onclick="location.href='./#projects'"
-      />
+      /> -->
     </section>
     
+  
+
+
     <section id="projects">
       <p class="section__text__p1">Browse My Recent</p>
       <h1 class="title">Projects</h1>
-      <h2 class="figma">#Figma Designs</h2>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/matt1.jpg"
-                alt="Project 3"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Project One<br><h4>Tacos</h4></h2>
-            <div class="btn-container">
-              <!-- <button -->
-                <!-- class="btn btn-color-2 project-btn" -->
-                <!-- onclick="location.href='https://github.com/'" -->
-              <!-- > -->
-                <!-- Github -->
-              <!-- </button> -->
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://www.figma.com/design/dRbjcIs7vCd1VZ6X8tx184/Food?node-id=40-6&t=IWCAZJFsECWVKuW0-4'"
-              >
-                Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/c1.jpg"
-                alt="Project 3"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Project Two<br><h4>Clothes</h4></h2>
-            <div class="btn-container">
-              <!-- <button -->
-                <!-- class="btn btn-color-2 project-btn" -->
-                <!-- onclick="location.href='https://github.com/'" -->
-              <!-- > -->
-                <!-- Github -->
-              <!-- </button> -->
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://www.figma.com/design/Zvis46CRniLwEDi59TvF13/clothes?node-id=0-1&t=IWCAZJFsECWVKuW0-1'"
-              >
-                Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/a1.jpg"
-                alt="Project 3"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Project Three<br><h4>Chat</h4></h2>
-            <div class="btn-container">
-              <!-- <button -->
-                <!-- class="btn btn-color-2 project-btn" -->
-                <!-- onclick="location.href='https://github.com/'" -->
-              <!-- > -->
-                <!-- Github -->
-              <!-- </button> -->
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://www.figma.com/design/b8xOlzZtpigvvYwiynQ2Hf/Connect-chat-app?t=IWCAZJFsECWVKuW0-1'"
-              >
-                Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/screenshot_20240731_015855_Figma.jpg"
-                alt="Project 3"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Project Four<br><h4>Crime Reporting System</h4></h2>
-            <div class="btn-container">
-              <!-- <button -->
-                <!-- class="btn btn-color-2 project-btn" -->
-                <!-- onclick="location.href='https://github.com/'" -->
-              <!-- > -->
-                <!-- Github -->
-              <!-- </button> -->
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://www.figma.com/design/lmatzvpXuSzxJCNccjnQSZ/Crime-Reporting-System?t=IWCAZJFsECWVKuW0-1'"
-              >
-               Demo
-              </button>
-            </div>
-          </div>
-          
-        </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#contact'"
-      />
-    </section>
-    <section id="projects">
-      <!-- <p class="section__text__p1">Browse My Recent</p> -->
-      <!-- <h1 class="title">Projects</h1> -->
       <h2 class="figma">#Flutter Projects</h2>
       <div class="experience-details-container">
         <div class="about-containers">
           <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/calculator app.jpg"
-                alt="Project 1"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Calculator App<br><h4>Calculates</h4></h2>
+            <video class="project-video" controls>
+              <source src="./assets/Food App.mp4" type="video/mp4" />
+              
+            </video>
+            <h2 class="experience-sub-title project-title">Food App<br /><h4>Food Delivery App</h4></h2>
             <div class="btn-container">
               <button
                 class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/Takalani-Nedzanani?tab=repositories/'"
+                onclick="location.href='https://github.com/Takalani-Nedzanani/Food_app'"
               >
                 Github
               </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/Takalani-Nedzanani?tab=repositories/'"
-              >
-                Live Demo
-              </button>
+              
             </div>
           </div>
           <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/unit app.jpg"
-                alt="Project 2"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Unit App<br><h4>basic viewing of units </h4></h2>
+            <video class="project-video" controls>
+              <source src="./assets/Crime Reporting System App.mp4" type="video/mp4" />
+              
+            </video>
+            <h2 class="experience-sub-title project-title">Crime Reporting App<br /><h4>Crime Reporting System App with firebase</h4></h2>
             <div class="btn-container">
               <button
                 class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/Takalani-Nedzanani?tab=repositories/'"
+                onclick="location.href='https://github.com/Takalani-Nedzanani/Crime_Reporting_System_App'"
               >
                 Github
               </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/Takalani-Nedzanani?tab=repositories/'"
-              >
-                Live Demo
-              </button>
+              
             </div>
           </div>
           <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/reflections app.jpg"
-                alt="Project 3"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Reflections App<br><h4>composed with firebase</h4></h2>
+            <video class="project-video" controls>
+              <source src="./assets/Chatting App.mp4" type="video/mp4" />
+             
+            </video>
+            <h2 class="experience-sub-title project-title">Chatting App<br /><h4>Chatting Application with  Firebase</h4></h2>
             <div class="btn-container">
               <button
                 class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/Takalani-Nedzanani?tab=repositories/'"
+                onclick="location.href='https://github.com/Takalani-Nedzanani/chatting_app'"
               >
                 Github
               </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/Takalani-Nedzanani?tab=repositories/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/crime reporting system app.jpg"
-                alt="Project 4"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Crime Reporting System App<br><h4>Complete CRS App composed with firebase</h4></h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/Takalani-Nedzanani?tab=repositories/'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/Takalani-Nedzanani?tab=repositories/'"
-              >
-                Live Demo
-              </button>
+              
             </div>
           </div>
           
-          
+          <div class="details-container color-container">
+            <video class="project-video" controls>
+              <source src="./assets/BMI App.mp4" type="video/mp4" />
+              
+            </video>
+            <h2 class="experience-sub-title project-title">BMI Calculator<br /><h4>Calculates BMI</h4></h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/Takalani-Nedzanani/BMI-Calculator-App'"
+              >
+                Github
+              </button>
+              <!-- <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/Takalani-Nedzanani?tab=repositories/'"
+              >
+                Live Demo
+              </button> -->
+            </div>
+          </div>
         </div>
       </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#contact'"
-      />
+
+
+
+
+
+
+
+      <h2 class="figma">#Website Projects</h2>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container color-container">
+            <video class="project-video" controls>
+              <source src="./assets/crime reportin website.mp4" type="video/mp4" />
+              
+            </video>
+            <h2 class="experience-sub-title project-title">Crime Reporting Website<br /><h4>Reporting Crimes with Firebase</h4></h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/Takalani-Nedzanani/Crime-Reporting-System-Website'"
+              >
+                GitHub
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <video class="project-video" controls>
+              <source src="./assets/book world website.mp4" type="video/mp4" />
+              
+            </video>
+            <h2 class="experience-sub-title project-title">Book World<br /><h4>Book Store Website</h4></h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/Takalani-Nedzanani/Book-World-Website'"
+              >
+              GitHub
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <video class="project-video" controls>
+              <source src="./assets/africa real website.mp4" type="video/mp4" />
+              
+            </video>
+            <h2 class="experience-sub-title project-title">Africa Real Estate <br /><h4>Property rentals website with firebase</h4></h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/Takalani-Nedzanani/Africa-Real-Estate-Website'"
+              >
+              GitHub
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <video class="project-video" controls>
+              <source src="./assets/matt food bar website.mp4" type="video/mp4" />
+              
+            </video>
+            <h2 class="experience-sub-title project-title">Matt Food BAr & Deluxe Grills<br /><h4>Food Website</h4></h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/Takalani-Nedzanani/Matt_Food_Bar_Deluxe_Grills-WEbsite'"
+              >
+              GitHub
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
     </section>
+
     <section id="contact">
       <p class="section__text__p1">Get in Touch</p>
       <h1 class="title">Contact Me</h1>
