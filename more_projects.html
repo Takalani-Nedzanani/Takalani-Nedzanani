@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+    <style>
+      .project-video {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .project-video:focus,
+      .project-video:hover {
+        transform: scale(1.02);
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+        margin: 0;
+        padding: 0;
+        color: #333333;
+      }
+
+      h1, h2, h3 {
+        color: #005f73;
+      }
+
+      .btn {
+        font-size: 1rem;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out;
+      }
+
+      .btn-color-1 {
+        background-color: #ff6f61;
+        color: #ffffff;
+      }
+
+      .btn-color-1:hover {
+        background-color: #e85d51;
+      }
+
+      .btn-color-2 {
+        background-color: #005f73;
+        color: #ffffff;
+      }
+
+      .btn-color-2:hover {
+        background-color: #004d5c;
+      }
+
+      nav {
+        background-color: #005f73;
+        color: #ffffff;
+        padding: 10px 20px;
+      }
+
+      nav .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+
+      nav .nav-links a {
+        text-decoration: none;
+        color: #ffffff;
+        margin: 0 10px;
+      }
+
+      nav .nav-links a:hover {
+        text-decoration: underline;
+      }
+
+      section {
+        padding: 40px 20px;
+        margin: 20px auto;
+      }
+
+      .section__text__p1 {
+        font-size: 1.2rem;
+        color: #ff6f61;
+      }
+
+      .title {
+        font-size: 2.5rem;
+        margin: 10px 0;
+      }
+
+      .project-video {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        border: 2px solid #005f73;
+        border-radius: 10px;
+        transition: transform 0.3s ease-in-out, border-color 0.3s ease-in-out;
+      }
+
+      .project-video:focus,
+      .project-video:hover {
+        transform: scale(1.02);
+        border-color: #ff6f61;
+      }
+
+      footer {
+        background-color: #6fe2f9;
+        color: #ffffff;
+        text-align: center;
+      }
+
+      footer a {
+        color: #ffffff;
+        text-decoration: none;
+      }
+
+      footer a:hover {
+        text-decoration: underline;
+      }
+
+      @keyframes fadeInUp {
+        0% {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+
+      .animated-text {
+        animation: fadeInUp 1s ease-in-out;
+        opacity: 0; /* Hidden before animation */
+        animation-fill-mode: forwards;
+      }
+
+      .section__text__p1 {
+        animation-delay: 0.2s;
+      }
+
+      .title {
+        animation-delay: 0.4s;
+      }
+
+      .section__text__p2 {
+        animation-delay: 0.6s;
+      }
+
+      .animated-btn {
+        animation: fadeInUp 1s ease-in-out;
+        opacity: 0;
+        animation-fill-mode: forwards;
+      }
+
+      .btn-container button:nth-child(1) {
+        animation-delay: 0.8s;
+      }
+
+      .btn-container button:nth-child(2) {
+        animation-delay: 1s;
+      }
+
+      .animated-socials {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+      }
+
+      .animated-icon {
+        animation: fadeIn 1.2s ease-in;
+        opacity: 0;
+        animation-fill-mode: forwards;
+      }
+
+      #socials-container img:nth-child(1) {
+        animation-delay: 1.2s;
+      }
+
+      #socials-container img:nth-child(2) {
+        animation-delay: 1.4s;
+      }
+
+      @keyframes backgroundAnimation {
+        0% { background-color: #ffffff; }
+        50% { background-color: #fafafa; }
+        100% { background-color: #ffffff; }
+      }
+
+      body {
+        animation: backgroundAnimation 10s infinite;
+      }
+    </style>
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo">Takalani Nedzanani</div>
+      <div>
+        <ul class="nav-links">
+          
+         
+          <li><a href="#projects">Projects</a></li>
+         
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">Takalani Nedzanani</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          
+          
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+         
+        </div>
+      </div>
+    </nav>
+   
+    
+         
+    <section id="projects">
+      
+      <h1 class="title">Flutter & Website Projects</h1>
+      
+      <!-- Flutter & Website Projects Section -->
+      
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container color-container">
+            <video class="project-video" controls>
+              <source src="./assets/africa real website.mp4" type="video/mp4" />
+            </video>
+            <h2 class="experience-sub-title project-title">
+              Africa Real Estate<br /><h4>Property Website</h4>
+            </h2>
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/Takalani-Nedzanani/Africa-Real-Estate-Website'">
+                Github
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <video class="project-video" controls>
+              <source src="./assets/street galore website.mp4" type="video/mp4" />
+            </video>
+            <h2 class="experience-sub-title project-title">
+              Street Galore Website<br /><h4>Clothes Website</h4>
+            </h2>
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/Takalani-Nedzanani/street-galore-fashion-Website'">
+                Github
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <video class="project-video" controls>
+              <source src="./assets/BMI App.mp4" type="video/mp4" />
+            </video>
+            <h2 class="experience-sub-title project-title">
+              BMI App<br /><h4>Calculates BMI</h4>
+            </h2>
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/Takalani-Nedzanani/BMI-Calculator-App'">
+                Github
+              </button>
+            </div>
+          </div>
+         
+        </div>
+      </div>
+     
+      
+      
+      
+    </section>
+
+   
+    
+    <script src="script.js"></script>
+  </body>
+</html>
